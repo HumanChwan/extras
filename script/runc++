@@ -1,0 +1,12 @@
+#!/bin/bash
+
+file=${@: -1}
+# santising the file name
+f=${file%.*}
+
+# Compiling...
+g++ -o $f.out -Wall -D COOKIE_CHAN=1 $f.cpp
+if [[ $1 != -b ]]
+then
+	./$f.out
+fi

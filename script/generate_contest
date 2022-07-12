@@ -1,0 +1,17 @@
+#!/bin/bash
+
+mkdir $1
+cd $1
+
+template=/home/cookiechan/Desktop/Programming/CP/Template/header.cpp
+
+alphas='F'
+if [ $2 ]
+then
+	alphas=$2;
+fi
+
+for x in $(eval echo {A..$alphas})
+do
+	cat $template > $x.cpp 
+done
