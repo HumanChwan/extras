@@ -7,7 +7,7 @@
 
 #define DEBUG(kek) \
 	std::cerr << "\n\033[1;31mDEBUG: \033[0;31m{ " << #kek << " = " << kek \
-         << "}\033[0m\n"
+         << " }\033[0m\n"
 
 void DEBUG_CERR () {
 	return;
