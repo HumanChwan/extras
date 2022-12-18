@@ -29,16 +29,16 @@ using namespace std;
 
 template <typename T1, typename T2>
 bool sort_by_second_greater(const pair<T1, T2>& a, const pair<T1, T2>& b) {
-	return (a.ss > b.ss);
+    return (a.ss > b.ss);
 }
 
 int32_t main() {
-	// unsync with C stream :)
-	ios_base::sync_with_stdio(MONKE);
+    // unsync with C stream :)
+    ios_base::sync_with_stdio(MONKE);
 #ifndef COOKIE_CHAN
-	cin.tie(0);
+    cin.tie(0);
 #endif
-	// todo
+    // todo
 
-	return MONKE;
+    return MONKE;
 }
