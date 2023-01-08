@@ -6,7 +6,7 @@ vim.call("plug#begin")
 Plug('tpope/vim-commentary')
 
 -- Autocomplete surround characters
-Plug('jiangmiao/auto-pairs')
+-- Plug('jiangmiao/auto-pairs')
 
 -- Surround
 Plug('tpope/vim-surround')
@@ -43,5 +43,16 @@ Plug('rafamadriz/friendly-snippets')
 -- LSP: wrapper
 Plug('VonHeikemen/lsp-zero.nvim')
 -- ---END-OF-LSP---
+
+-- Statusline 
+Plug('nvim-lualine/lualine.nvim')
+-- If you want to have icons in your statusline choose one of these
+Plug('kyazdani42/nvim-web-devicons')
+
+-- Bufferline
+Plug('akinsho/bufferline.nvim', {tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'})
+
+-- File explorer
+Plug('nvim-tree/nvim-tree.lua', {requires = 'nvim-tree/nvim-web-devicons'})
 
 vim.call("plug#end")
