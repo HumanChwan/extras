@@ -6,7 +6,7 @@ vim.call("plug#begin")
 Plug('tpope/vim-commentary')
 
 -- Autocomplete surround characters
--- Plug('jiangmiao/auto-pairs')
+Plug('windwp/nvim-autopairs')
 
 -- Surround
 Plug('tpope/vim-surround')
@@ -14,7 +14,7 @@ Plug('tpope/vim-surround')
 -- Telescope
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
-Plug('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
 -- Color schemes
 Plug('morhetz/gruvbox')
@@ -50,9 +50,12 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('kyazdani42/nvim-web-devicons')
 
 -- Bufferline
-Plug('akinsho/bufferline.nvim', {tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'})
+Plug('akinsho/bufferline.nvim', { tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' })
 
 -- File explorer
-Plug('nvim-tree/nvim-tree.lua', {requires = 'nvim-tree/nvim-web-devicons'})
+Plug('nvim-tree/nvim-tree.lua', { requires = 'nvim-tree/nvim-web-devicons' })
+
+-- Multiline cursor
+Plug('mg979/vim-visual-multi', { branch = 'master' })
 
 vim.call("plug#end")
