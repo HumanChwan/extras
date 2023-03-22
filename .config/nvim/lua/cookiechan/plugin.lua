@@ -58,4 +58,7 @@ Plug('nvim-tree/nvim-tree.lua', { requires = 'nvim-tree/nvim-web-devicons' })
 -- Multiline cursor
 Plug('mg979/vim-visual-multi', { branch = 'master' })
 
+-- Markdown preview
+Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
+
 vim.call("plug#end")

@@ -34,6 +34,13 @@ lsp.configure("sumneko_lua", {
 	}
 })
 
+lsp.configure("clangd", {
+    cmd = {
+        "clangd",
+        "--query-driver=C:\\msys64\\ucrt64\\bin\\g*"
+    }
+})
+
 lsp.on_attach(function(_, bufnr)
 	local options = { buffer = bufnr, remap = false }
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, options)

@@ -1,3 +1,5 @@
 require("cookiechan.set")
 require("cookiechan.plugin")
 require("cookiechan.remap")
+require("cookiechan.autocmd")
+require("cookiechan.neovide")
