@@ -18,6 +18,7 @@ Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
 -- Color schemes
 Plug('morhetz/gruvbox')
+Plug('rose-pine/neovim', { as = 'rose-pine' })
 
 -- Git support
 Plug('tpope/vim-fugitive')
@@ -60,5 +61,8 @@ Plug('mg979/vim-visual-multi', { branch = 'master' })
 
 -- Markdown preview
 Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
+
+-- React JSX indentation and all
+Plug('neoclide/vim-jsx-improve')
 
 vim.call("plug#end")
