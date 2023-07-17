@@ -3,9 +3,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-	"tsserver",
-	"eslint",
-	"sumneko_lua",
+	"lua_ls",
 	"rust_analyzer",
 	"clangd"
 })
@@ -23,7 +21,7 @@ lsp.setup_nvim_cmp({
 	mapping = cmp_mappings
 })
 
-lsp.configure("sumneko_lua", {
+lsp.configure("lua_ls", {
 	force_setup = true,
 	settings = {
 		Lua = {
