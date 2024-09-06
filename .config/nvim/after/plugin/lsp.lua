@@ -2,10 +2,16 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-	"lua_ls",
-	"rust_analyzer",
-	"clangd"
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  -- Replace the language servers listed here 
+  -- with the ones you want to install
+  ensure_installed = {'tsserver', 'rust_analyzer', 'pyright', 'lua_ls'},
+  handlers = {
+    function(server_name)
+      require('lspconfig')[server_name].setup({})
+    end,
+  },
 })
 
 local cmp = require("cmp")
@@ -17,9 +23,12 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	['<C-Space>'] = cmp.mapping.complete()
 })
 
-lsp.setup_nvim_cmp({
-	mapping = cmp_mappings
+cmp.setup({
+    mapping = cmp_mappings
 })
+-- lsp.setup_nvim_cmp({
+-- 	mapping = cmp_mappings
+-- })
 
 lsp.configure("lua_ls", {
 	force_setup = true,
@@ -30,13 +39,6 @@ lsp.configure("lua_ls", {
 			}
 		}
 	}
-})
-
-lsp.configure("clangd", {
-    cmd = {
-        "clangd",
-        "--query-driver=C:\\msys64\\ucrt64\\bin\\g*"
-    }
 })
 
 lsp.on_attach(function(_, bufnr)

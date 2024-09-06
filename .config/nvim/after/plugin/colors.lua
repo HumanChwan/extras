@@ -13,8 +13,14 @@ function SetColorScheme(color)
 
     if (color == "rose-pine") then
         require("rose-pine").setup({
-            disable_background = true,
+            variant = "main",
+            enable = {
+                legacy_highlights = true,
+                migrations = true,
+            },
+            disable_background = false,
             disable_float_background = true,
+            disable_italics = true,
         })
     end
 

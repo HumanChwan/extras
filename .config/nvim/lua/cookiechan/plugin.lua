@@ -13,7 +13,7 @@ Plug('tpope/vim-surround')
 
 -- Telescope
 Plug('nvim-lua/plenary.nvim')
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
+Plug('nvim-telescope/telescope.nvim', { tag = '0.1.4' })
 Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
 -- Color schemes
@@ -42,7 +42,7 @@ Plug('L3MON4D3/LuaSnip')
 Plug('rafamadriz/friendly-snippets')
 
 -- LSP: wrapper
-Plug('VonHeikemen/lsp-zero.nvim')
+Plug('VonHeikemen/lsp-zero.nvim', { tag = "v3.x"})
 -- ---END-OF-LSP---
 
 -- Statusline 
@@ -64,5 +64,5 @@ Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
 
 -- React JSX indentation and all
 Plug('neoclide/vim-jsx-improve')
-
 vim.call("plug#end")
+
